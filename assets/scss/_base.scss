@@ -1,3 +1,13 @@
+$color-dark-blue: #13183F;
+$color-light-blue: #666CA3;
+$color-light-grey: #83869A;
+$color-white: #FFFFFF;
+$color-orange-gradient: linear-gradient(#FF6F48, #F02AA6);
+
+$font-primary: 'Plus Jakarta Sans', sans-serif;
+$section-padding: 0 2rem;
+
+
 *,
 *::after,
 *::before {
@@ -9,4 +19,13 @@
 html {
     box-sizing: border-box;
     font-size: 62.5%;
+}
+
+body {
+    font-family: $font-primary;
+    line-height: 1.2;
+}
+
+h1, h2, h3 {
+    color: $color-dark-blue;
 }
