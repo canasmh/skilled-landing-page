@@ -1,0 +1,32 @@
+.btn {
+
+    &,
+    &:link,
+    &:visited {
+        text-decoration: none;
+        border-radius: 50px;
+        padding: 1rem 2rem;
+        font-weight: 400;
+        
+    }
+
+    &--blue {
+        background-color: $color-dark-blue;
+        color: $color-white;
+        transition: background-color 0.2s;
+
+        &:hover {
+            background-color: $color-light-blue;
+        }
+    }
+
+    &--orange {
+        background-image: $color-orange-gradient;
+        color: $color-white;
+        transition: background-color 0.2s;
+
+        &:hover {
+            background-color: $color-light-blue;
+        }
+    }
+}
