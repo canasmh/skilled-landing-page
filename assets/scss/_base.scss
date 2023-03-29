@@ -2,7 +2,9 @@ $color-dark-blue: #13183F;
 $color-light-blue: #666CA3;
 $color-light-grey: #83869A;
 $color-white: #FFFFFF;
+$color-pink: #F74780;
 $color-orange-gradient: linear-gradient(#FF6F48, #F02AA6);
+$color-body-background: linear-gradient(#FFFFFF, #F0F1FF);
 
 $font-primary: 'Plus Jakarta Sans', sans-serif;
 $section-padding: 0 2rem;
@@ -24,6 +26,7 @@ html {
 body {
     font-family: $font-primary;
     line-height: 1.2;
+    background-image: $color-body-background;
 }
 
 h1, h2, h3 {
