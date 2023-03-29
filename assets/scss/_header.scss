@@ -1,0 +1,27 @@
+.header {
+    padding: $section-padding;
+
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 2rem 0;
+    }
+
+    &__heading {
+        margin-bottom: 2rem;
+    }
+
+    &__text {
+        margin-bottom: 2.5rem;
+    }
+
+    &__logo {
+        height: 1.6rem;
+    }
+
+    &__img {
+        width: 90vw;
+        margin: 2rem auto;
+    }
+}
