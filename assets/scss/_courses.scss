@@ -1,0 +1,38 @@
+.courses {
+    padding: $section-padding;
+
+    &__container {
+        padding: 4rem 3rem;
+        background-color: $color-white;
+        margin-bottom: 4rem;
+        border-radius: 12px;
+        position: relative;
+
+        &--colored {
+            padding: 3rem; 
+            background-image: $color-orange-gradient;
+            & h2 {
+                color: $color-white;
+            }
+            
+        }
+
+        & img {
+            position: absolute;
+            top: 0;
+            left: 3rem;
+            transform: translateY(-50%)
+        }
+
+        & h3, & p {
+            margin-bottom: 2rem;
+        }
+
+        & a, & a:link, & a :visited {
+            color: $color-pink;
+            text-decoration: none;
+            font-size: 1.6rem;
+            font-weight: 600;
+        }
+    }
+}
