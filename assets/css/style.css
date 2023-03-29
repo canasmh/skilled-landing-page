@@ -11,13 +11,20 @@ html {
 
 body {
   font-family: "Plus Jakarta Sans", sans-serif;
-  line-height: 1.2; }
+  line-height: 1.2;
+  background-image: linear-gradient(#FFFFFF, #F0F1FF); }
 
 h1, h2, h3 {
   color: #13183F; }
 
 h1 {
   font-size: 3rem; }
+
+h2 {
+  font-size: 2.5rem; }
+
+h3 {
+  font-size: 2rem; }
 
 p {
   color: #83869A;
@@ -60,3 +67,29 @@ p {
   transition: background-color 0.2s; }
   .btn--orange:hover {
     background-color: #666CA3; }
+
+.courses {
+  padding: 0 2rem; }
+  .courses__container {
+    padding: 4rem 3rem;
+    background-color: #FFFFFF;
+    margin-bottom: 4rem;
+    border-radius: 12px;
+    position: relative; }
+    .courses__container--colored {
+      padding: 3rem;
+      background-image: linear-gradient(#FF6F48, #F02AA6); }
+      .courses__container--colored h2 {
+        color: #FFFFFF; }
+    .courses__container img {
+      position: absolute;
+      top: 0;
+      left: 3rem;
+      transform: translateY(-50%); }
+    .courses__container h3, .courses__container p {
+      margin-bottom: 2rem; }
+    .courses__container a, .courses__container a:link, .courses__container a :visited {
+      color: #F74780;
+      text-decoration: none;
+      font-size: 1.6rem;
+      font-weight: 600; }
