@@ -1,0 +1,14 @@
+.footer {
+    padding: $section-padding;
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+    background-color: $color-dark-blue;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 3rem;
+
+    &__logo {
+        height: 1.6rem;
+    }
+}

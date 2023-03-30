@@ -6,8 +6,8 @@
         text-decoration: none;
         border-radius: 50px;
         padding: 1rem 2rem;
-        font-weight: 400;
-        
+        font-weight: 600;
+        font-size: 1.6rem;
     }
 
     &--blue {
@@ -22,6 +22,16 @@
 
     &--orange {
         background-image: $color-orange-gradient;
+        color: $color-white;
+        transition: background-color 0.2s;
+
+        &:hover {
+            background-color: $color-light-blue;
+        }
+    }
+
+    &--purple {
+        background-image: $color-purple-gradient;
         color: $color-white;
         transition: background-color 0.2s;
 
