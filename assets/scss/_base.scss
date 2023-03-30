@@ -1,0 +1,43 @@
+$color-dark-blue: #13183F;
+$color-light-blue: #666CA3;
+$color-light-grey: #83869A;
+$color-white: #FFFFFF;
+$color-pink: #F74780;
+$color-orange-gradient: linear-gradient(#FF6F48, #F02AA6);
+$color-purple-gradient: linear-gradient(#F02AA6, #4851FF);
+$color-body-background: linear-gradient(#FFFFFF, #F0F1FF);
+
+$font-primary: 'Plus Jakarta Sans', sans-serif;
+$section-padding-small: 0 2rem;
+$section-padding-medium: 0 5rem;
+$section-padding-large: 0 10rem;
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+    @media only screen and (min-width: 600px) {
+        font-size: 56.25%
+    }
+
+    @media only screen and (min-width: 900px) {
+        font-size: 50%
+    }
+}
+
+body {
+    font-family: $font-primary;
+    line-height: 1.2;
+    background-image: $color-body-background;
+}
+
+h1, h2, h3 {
+    color: $color-dark-blue;
+}
