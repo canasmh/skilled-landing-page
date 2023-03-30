@@ -8,6 +8,12 @@
 html {
   box-sizing: border-box;
   font-size: 62.5%; }
+  @media only screen and (min-width: 600px) {
+    html {
+      font-size: 56.25%; } }
+  @media only screen and (min-width: 900px) {
+    html {
+      font-size: 50%; } }
 
 body {
   font-family: "Plus Jakarta Sans", sans-serif;
@@ -19,6 +25,9 @@ h1, h2, h3 {
 
 h1 {
   font-size: 3rem; }
+  @media only screen and (min-width: 900px) {
+    h1 {
+      font-size: 4rem; } }
 
 h2 {
   font-size: 2.5rem; }
@@ -32,7 +41,14 @@ p {
   line-height: 1.5; }
 
 .header {
-  padding: 0 2rem; }
+  padding: 0 2rem;
+  overflow-x: hidden; }
+  @media only screen and (min-width: 600px) {
+    .header {
+      padding: 0 5rem; } }
+  @media only screen and (min-width: 900px) {
+    .header {
+      padding: 0 10rem; } }
   .header__container {
     display: flex;
     justify-content: space-between;
@@ -44,38 +60,109 @@ p {
     margin-bottom: 2.5rem; }
   .header__logo {
     height: 1.6rem; }
-  .header__img {
+  .header__img, .header picture img {
     width: 90vw;
     margin: 2rem auto; }
+  @media only screen and (min-width: 600px) {
+    .header__content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center; }
+      .header__content--container {
+        flex-basis: 60vw; }
+    .header__img, .header picture img {
+      margin-top: -5rem;
+      margin-right: -10rem;
+      width: 60vw; } }
+  @media only screen and (min-width: 900px) {
+    .header__content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center; }
+      .header__content--container {
+        flex-basis: 30vw; }
+    .header__img, .header picture img {
+      margin-top: -7.5rem;
+      margin-right: -35rem;
+      width: 70vw; } }
 
 .btn, .btn:link, .btn:visited {
   text-decoration: none;
   border-radius: 50px;
   padding: 1rem 2rem;
-  font-weight: 400; }
+  font-weight: 600;
+  font-size: 1.6rem;
+  z-index: 10;
+  cursor: pointer; }
 
 .btn--blue {
   background-color: #13183F;
   color: #FFFFFF;
-  transition: background-color 0.2s; }
+  transition: background-color 0.2s ease-out; }
   .btn--blue:hover {
     background-color: #666CA3; }
 
 .btn--orange {
   background-image: linear-gradient(#FF6F48, #F02AA6);
   color: #FFFFFF;
-  transition: background-color 0.2s; }
-  .btn--orange:hover {
-    background-color: #666CA3; }
+  transition: all 0.2s;
+  position: relative; }
+  .btn--orange:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    border-radius: 50px;
+    background-color: white;
+    transition: all 0.2s ease-out; }
+  .btn--orange:hover:before {
+    opacity: 0.3; }
+
+.btn--purple {
+  background-image: linear-gradient(#F02AA6, #4851FF);
+  color: #FFFFFF;
+  transition: background-color 0.2s;
+  position: relative; }
+  .btn--purple:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    border-radius: 50px;
+    background-color: white;
+    transition: all 0.2s ease-out; }
+  .btn--purple:hover:before {
+    opacity: 0.3; }
 
 .courses {
-  padding: 0 2rem; }
+  padding: 0 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  column-gap: 0.8rem;
+  row-gap: 4rem; }
+  @media only screen and (min-width: 600px) {
+    .courses {
+      row-gap: 6rem;
+      padding: 0 5rem; } }
+  @media only screen and (min-width: 900px) {
+    .courses {
+      grid-template-columns: repeat(3, minmax(260px, 1fr));
+      padding: 0 10rem;
+      column-gap: 1.5rem; } }
   .courses__container {
-    padding: 4rem 3rem;
+    padding: 4.5rem 3rem;
     background-color: #FFFFFF;
-    margin-bottom: 4rem;
     border-radius: 12px;
-    position: relative; }
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; }
     .courses__container--colored {
       padding: 3rem;
       background-image: linear-gradient(#FF6F48, #F02AA6); }
@@ -92,4 +179,29 @@ p {
       color: #F74780;
       text-decoration: none;
       font-size: 1.6rem;
-      font-weight: 600; }
+      font-weight: 600;
+      transition: color 0.2s ease-out; }
+      .courses__container a:hover, .courses__container a:link:hover, .courses__container a :visited:hover {
+        color: #fa90b3; }
+
+.footer {
+  padding: 0 2rem;
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+  background-color: #13183F;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 7rem; }
+  @media only screen and (min-width: 600px) {
+    .footer {
+      padding: 0 5rem;
+      padding-top: 2.5rem;
+      padding-bottom: 2.5rem; } }
+  @media only screen and (min-width: 900px) {
+    .footer {
+      padding: 0 10rem;
+      padding-top: 2.5rem;
+      padding-bottom: 2.5rem; } }
+  .footer__logo {
+    height: 1.6rem; }
