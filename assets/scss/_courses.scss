@@ -18,11 +18,14 @@
     
 
     &__container {
-        padding: 4rem 3rem;
+        padding: 4.5rem 3rem;
         background-color: $color-white;
         // margin-bottom: 4rem;
         border-radius: 12px;
         position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
 
         &--colored {
             padding: 3rem; 
@@ -49,6 +52,11 @@
             text-decoration: none;
             font-size: 1.6rem;
             font-weight: 600;
+            transition: color 0.2s ease-out;
+
+            &:hover {
+                color: lighten($color-pink, 15%);
+            }
         }
     }
 }
