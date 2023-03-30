@@ -22,10 +22,14 @@
 
     &__text {
         margin-bottom: 2.5rem;
+
+        @media only screen and (min-width: 900px) {
+            margin-bottom: 3.5rem;
+        }
     }
 
     &__logo {
-        height: 1.6rem;
+        height: 2rem;
     }
 
     &__img, & picture img {
@@ -63,9 +67,9 @@
         }
 
         &__img, & picture img {
-            margin-top: -7.5rem;
-            margin-right: -35rem;
-            width: 70vw;
+            margin-top: -10rem;
+            margin-right: -40rem;
+            width: 60vw;
         }
     }
 }
