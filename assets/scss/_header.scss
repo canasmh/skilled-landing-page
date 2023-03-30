@@ -1,5 +1,13 @@
 .header {
-    padding: $section-padding;
+    padding: $section-padding-small;
+    @media only screen and (min-width: 600px) {
+        padding: $section-padding-medium;
+    }
+
+    @media only screen and (min-width: 900px) {
+        padding: $section-padding-large;
+    }
+    overflow-x: hidden;
 
     &__container {
         display: flex;
@@ -20,8 +28,44 @@
         height: 1.6rem;
     }
 
-    &__img {
+    &__img, & picture img {
         width: 90vw;
         margin: 2rem auto;
+    }
+
+    @media only screen and (min-width: 600px) {
+        &__content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            &--container {
+                flex-basis: 60vw;
+            }
+        }
+
+        &__img, & picture img {
+            margin-top: -5rem;
+            margin-right: -10rem;
+            width: 60vw;
+        }
+    }
+
+    @media only screen and (min-width: 900px) {
+        &__content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            &--container {
+                flex-basis: 30vw;
+            }
+        }
+
+        &__img, & picture img {
+            margin-top: -7.5rem;
+            margin-right: -35rem;
+            width: 70vw;
+        }
     }
 }
