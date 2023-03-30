@@ -10,7 +10,7 @@ $color-body-background: linear-gradient(#FFFFFF, #F0F1FF);
 $font-primary: 'Plus Jakarta Sans', sans-serif;
 $section-padding-small: 0 2rem;
 $section-padding-medium: 0 5rem;
-$section-padding-large: 0 10rem;
+$section-padding-large: 0 20rem;
 
 *,
 *::after,
@@ -23,13 +23,9 @@ $section-padding-large: 0 10rem;
 html {
     box-sizing: border-box;
     font-size: 62.5%;
-    @media only screen and (min-width: 600px) {
-        font-size: 56.25%
-    }
-
-    @media only screen and (min-width: 900px) {
-        font-size: 50%
-    }
+    // @media only screen and (min-width: 600px) {
+    //     font-size: 56.25%
+    // }
 }
 
 body {
