@@ -8,12 +8,14 @@
         padding: 1rem 2rem;
         font-weight: 600;
         font-size: 1.6rem;
+        z-index: 10;
+        cursor: pointer;
     }
 
     &--blue {
         background-color: $color-dark-blue;
         color: $color-white;
-        transition: background-color 0.2s;
+        transition: background-color 0.2s ease-out;
 
         &:hover {
             background-color: $color-light-blue;
@@ -23,10 +25,26 @@
     &--orange {
         background-image: $color-orange-gradient;
         color: $color-white;
-        transition: background-color 0.2s;
+        transition: all 0.2s;
+        position: relative;
+
+        &:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            border-radius: 50px;
+            background-color: rgb(255, 255, 255);
+            transition: all 0.2s ease-out;
+        }
 
         &:hover {
-            background-color: $color-light-blue;
+            &:before {
+                opacity: 0.3;
+            }
         }
     }
 
@@ -34,9 +52,25 @@
         background-image: $color-purple-gradient;
         color: $color-white;
         transition: background-color 0.2s;
+        position: relative;
+
+        &:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            border-radius: 50px;
+            background-color: rgb(255, 255, 255);
+            transition: all 0.2s ease-out;
+        }
 
         &:hover {
-            background-color: $color-light-blue;
+            &:before {
+                opacity: 0.3;
+            }
         }
     }
 }
